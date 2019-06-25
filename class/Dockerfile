@@ -1,9 +1,12 @@
 FROM node:10
 
-RUN mkdir -p /usr/src/app
+RUN mkdir -p /usr/src/class
 
-WORKDIR /usr/src/app
+WORKDIR /usr/src/class
 
-RUN npm install -g @angular/cli
+RUN npm install -g @angular/cli && \
+    npm install -g typescript
 
 COPY . .
+
+CMD cd typescript/ && tsc -w
