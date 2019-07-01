@@ -1,10 +1,12 @@
 version: '3.5'
 services:
-  app:
+  angular:
     stdin_open: true
     tty: true
     build:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - '.:/usr/src/class'
+      - './:/usr/src/app'
+    ports:
+      - '4200:4200'
