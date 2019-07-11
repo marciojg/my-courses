@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core'
+import { Component, OnInit, EventEmitter, Output, OnDestroy } from '@angular/core'
 
 import { Frase } from '../shared/frase.model'
 import { FRASES } from './frases-mock'
@@ -8,7 +8,7 @@ import { FRASES } from './frases-mock'
   templateUrl: './painel.component.html',
   styleUrls: ['./painel.component.css']
 })
-export class PainelComponent implements OnInit {
+export class PainelComponent implements OnInit, OnDestroy {
 
   public frases: Frase[] = FRASES
   public instrucao: string = 'Traduza a frase:'
@@ -29,6 +29,9 @@ export class PainelComponent implements OnInit {
   ngOnInit() {
   }
 
+  ngOnDestroy() {
+  }
+
   public atualizaResposta(resposta: Event): void {
     this.resposta = (<HTMLInputElement>resposta.target).value
   }
@@ -40,7 +43,6 @@ export class PainelComponent implements OnInit {
 
       //progresso
       this.progresso = this.progresso + (100/this.frases.length)
-      console.log(this.progresso)
 
       //finalizada com sucesso # no curso ele usou this.rodada === 4
       if (this.rodada >= this.frases.length) {
