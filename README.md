@@ -20,13 +20,14 @@ sudo npm cache verify
 sudo npm cache clear --force
 sudo npm install
 sudo npm install --only=dev
+sudo npm install -g json-server
 sudo node --version && sudo npm --version && sudo ng version
 ```
 
 ### Abrir terminal e rodar
 
 ```
-npm install && ng serve --host 0.0.0.0 --port 4200
+ng serve --host 0.0.0.0 --port 4200
 ```
 
 ### Abrir outro terminal e rodar

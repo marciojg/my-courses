@@ -22,7 +22,6 @@
     "bootstrap": "latest",
     "http-server": "latest",
     "jquery": "latest",
-    "json-server": "latest",
     "npm": "latest",
     "rxjs": "latest",
     "tether": "latest",
@@ -48,6 +47,6 @@
     "protractor": "latest",
     "ts-node": "latest",
     "tslint": "latest",
-    "typescript": "latest"
+    "typescript": "~3.4.5"
   }
 }
