@@ -13,4 +13,10 @@ export class OfertasService {
                .then((resposta: any) => resposta)
     // No curso, o parametro resposta precisa ser convertido para json, usando resposta.json()
   }
+
+  public getOfertasPorCategoria(categoria: string) {
+    return this.http.get(`http://localhost:4000/ofertas?categoria=${categoria}`)
+               .toPromise()
+               .then((resposta: any) => resposta)
+  }
 }
