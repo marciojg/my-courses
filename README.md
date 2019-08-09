@@ -15,12 +15,9 @@ docker-compose build && docker-compose up -d && docker-compose exec angular bash
 sudo rm -Rf node_modules/
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt-get install -y nodejs
-sudo npm install npm@latest
-sudo npm cache verify
-sudo npm cache clear --force
-sudo npm install
-sudo npm install --only=dev
+sudo npm install -g @angular/cli
 sudo npm install -g json-server
+sudo npm install
 sudo node --version && sudo npm --version && sudo ng version
 ```
 
