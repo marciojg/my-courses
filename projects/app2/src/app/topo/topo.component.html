@@ -2,15 +2,18 @@
   <nav class="navbar navbar-light bg-faded">
     <div class="container">
       <div class="row">
-        <div class="col-lg-2">
+        <div class="col-md-2">
           <a class="navbar-brand" routerLink=''>
             <img src="/assets/logo.png" />
           </a>
         </div>
-        <div class="col-lg-6">
+        <div class="col-md-6">
           <input type="text" #pesquisaPorOfertas (keyup)="pesquisa(pesquisaPorOfertas.value)" />
+          <ul class="list-group" style="position: absolute">
+            <li class="list-group-item" *ngFor="let oferta of ofertas2">{{ oferta.titulo | uppercase }}</li>
+          </ul>
         </div>
-        <div class="col-lg-4">
+        <div class="col-md-4">
           <a a href="#"><img src="/assets/carrinho.png" /></a>
         </div>
       </div>
