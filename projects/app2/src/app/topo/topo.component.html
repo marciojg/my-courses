@@ -10,7 +10,7 @@
         <div class="col-md-6">
           <input type="text" #pesquisaPorOfertas (keyup)="pesquisa(pesquisaPorOfertas.value)" />
           <ul class="list-group" style="position: absolute">
-            <li class="list-group-item" *ngFor="let oferta of ofertas2">{{ oferta.titulo | uppercase }}</li>
+            <li class="list-group-item" *ngFor="let oferta of ofertas | async ">{{ oferta.titulo | descricaoReduzida:15 }}</li>
           </ul>
         </div>
         <div class="col-md-4">
