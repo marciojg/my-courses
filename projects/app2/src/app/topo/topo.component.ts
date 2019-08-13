@@ -39,4 +39,8 @@ export class TopoComponent implements OnInit {
     this.subjectPesquisa.next(termoDaPesquisa)
   }
 
+  public limpaPesquisa(): void {
+    this.subjectPesquisa.next('')
+  }
+
 }
