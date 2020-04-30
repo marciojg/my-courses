@@ -58,8 +58,17 @@ export class NegociacaoController {
         throw new Error(res.statusText);
       }
     })
-    .then((negociacoes: Negociacao[]) => {
-      negociacoes.forEach(negociacao => {
+    .then((negociacoesParaImportar: Negociacao[]) => {
+
+      const negociacoesJaImportadas = this._negociacoes.paraArray();
+
+      negociacoesParaImportar
+      .filter(negociacao =>
+        !negociacoesJaImportadas.some(jaImportada =>
+          negociacao.ehIgual(jaImportada)
+        )
+      )
+      .forEach(negociacao => {
         this._negociacoes.adiciona(negociacao);
       })
 
