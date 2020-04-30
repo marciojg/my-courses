@@ -75,7 +75,9 @@ export class NegociacaoController {
       this._negociacoesView.update(this._negociacoes);
       this._mensagemView.update('Negociações importadas com sucesso!');
     })
-    .catch(err => console.log(err.message));
+    .catch((error: Error) => {
+      this._mensagemView.update(error.message);
+    });
   }
 
   private _ehDiaUtil(date: Date): boolean {
