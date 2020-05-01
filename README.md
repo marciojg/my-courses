@@ -1,34 +1,34 @@
-# my-courses
-Repositório destinado a guardar os códigos fontes produzidos nos cursos que fiz. Separado por branch
+Projeto com base no curso da Udemy - Curso de Desenvolvimento Web com ES6, TypeScript e Angular
 
-# Para adicionar mais um siga esta sequencia de exemplo
-
-```
-git checkout -b nome-da-linguagem-mais-complemento
-
-git remote add -f alurabank ~/Desktop/projects/curso-ts/alurabank/
-
-git merge alurabank/master --allow-unrelated-histories
-
-echo "Comentário sobre o código do curso" > README.md
-
-git add .
-
-git commit -m "Adicionado curso xxxxx"
-
-git push --set-upstream origin nome-da-linguagem-mais-complemento
-```
-
-# Sequencia para editar o README.md da master
+## Comando necessário até a sessão 6
 
 ```
-git checkout master
+cd projects/app1
 
-echo 'blabla' >> README.md
+docker-compose build && docker-compose up -d && docker-compose exec angular bash
+```
 
-git add .
+## App2 - Sem Docker - Todos os comandos abaixos devem ser executados dentro de app2
 
-git commit --amend --no-edit
+### Na primeira vez deve rodar
+```
+sudo rm -Rf node_modules/
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+sudo apt-get install -y nodejs
+sudo npm install -g @angular/cli
+sudo npm install -g json-server
+sudo npm install
+sudo node --version && sudo npm --version && sudo ng version
+```
 
-git push --force
+### Abrir terminal e rodar
+
+```
+ng serve --host 0.0.0.0 --port 4200
+```
+
+### Abrir outro terminal e rodar
+
+```
+json-server --watch banco-de-dados.json --port 4000
 ```
