@@ -1,6 +1,7 @@
 const path = require('path');
 const babiliPlugin = require('babili-webpack-plugin');
 const extractTextPlugin = require('extract-text-webpack-plugin');
+const optimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const plugins = [
   new extractTextPlugin("styles.css")
@@ -8,6 +9,16 @@ const plugins = [
 
 if(process.env.NODE_ENV == 'production') {
   plugins.push(new babiliPlugin());
+
+  plugins.push(new optimizeCSSAssetsPlugin({
+    cssProcessor: require('cssnano'),
+    cssProcessorOptions: {
+        discardComments: {
+            removeAll: true
+        }
+    },
+    canPrint: true
+  }));
 }
 
 // CARREGA DA DIREITA PARA ESQUERDA
