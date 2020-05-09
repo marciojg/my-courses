@@ -3,8 +3,39 @@ const babiliPlugin = require('babili-webpack-plugin');
 const extractTextPlugin = require('extract-text-webpack-plugin');
 const optimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const plugins = [
+
+  new HtmlWebpackPlugin({
+    /*
+    adiciona um hash no final da URL dos arquivos script e CSS importados
+    no arquivo HTML gerado, importante para versionamento e cache no navegador.
+    Quando um bundle diferente for gerado, o hash será diferente e isso é suficiente
+    para invalidar o cache do navegador, fazendo-o carregar o arquivo mais novo.
+    */
+    hash: true,
+    /*
+    recebe um objeto como parâmetro com as configurações utilizadas para minificar o HTML.
+    Podemos consultar todas as configurações possíveis no
+    endereço https://github.com/kangax/html-minifier#options-quick-reference.
+    */
+    minify: {
+        html5: true,
+        collapseWhitespace: true,
+        removeComments: true,
+    },
+    /*
+    o nome do arquivo HTML que será gerado. Respeitará o valor do path de output
+    que já configuramos logo no início da criação do arquivo webpack.config.js.
+    */
+    filename: 'index.html',
+    /*
+    caminho do arquivo que servirá como template para geração de index.html.
+    */
+    template: __dirname + '/main.html'
+  }),
+
   new extractTextPlugin("styles.css"),
 
   // Disponibiliza o jquery no scopo global do webpack MAS
@@ -50,8 +81,8 @@ module.exports = {
   },
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-    publicPath: 'dist'
+    path: path.resolve(__dirname, 'dist')
+    /* removeu publicPath */
   },
   module: {
     rules: [
