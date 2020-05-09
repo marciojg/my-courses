@@ -2,9 +2,19 @@ const path = require('path');
 const babiliPlugin = require('babili-webpack-plugin');
 const extractTextPlugin = require('extract-text-webpack-plugin');
 const optimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const webpack = require('webpack');
 
 const plugins = [
-  new extractTextPlugin("styles.css")
+  new extractTextPlugin("styles.css"),
+
+  // Disponibiliza o jquery no scopo global do webpack MAS
+  // não disponibiliza no scopo da aplicação, ou seja,
+  // no console do navegador continua não existindo jquery mas
+  // para o modulo do modal do bootstrap que precisa dele, está disponivel.
+  new webpack.ProvidePlugin({
+    '$': 'jquery/dist/jquery.js',
+    'jQuery': 'jquery/dist/jquery.js'
+  })
 ];
 
 if(process.env.NODE_ENV == 'production') {

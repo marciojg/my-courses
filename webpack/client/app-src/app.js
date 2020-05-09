@@ -3,6 +3,7 @@ import { Negociacao } from './domain/index.js';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
+import 'bootstrap/js/modal.js'; // Tem dependencia do jquery
 import '../css/meucss.css';
 
 const controller = new NegociacaoController();
