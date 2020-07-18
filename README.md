@@ -1,34 +1,13 @@
-# my-courses
-Repositório destinado a guardar os códigos fontes produzidos nos cursos que fiz. Separado por branch
+Compilado do curso:
 
-# Para adicionar mais um siga esta sequencia de exemplo
+VERSÕES:
 
-```
-git checkout -b nome-da-linguagem-mais-complemento
+- NODE.JS = 8.9
+- ANGULAR CLI = 6.X
 
-git remote add -f alurabank ~/Desktop/projects/curso-ts/alurabank/
+* [Angular parte 1: Fundamentos](https://cursos.alura.com.br/course/angular-fundamentos)
+Parte 2
+Parte 3
+Parte 4
 
-git merge alurabank/master --allow-unrelated-histories
-
-echo "Comentário sobre o código do curso" > README.md
-
-git add .
-
-git commit -m "Adicionado curso xxxxx"
-
-git push --set-upstream origin nome-da-linguagem-mais-complemento
-```
-
-# Sequencia para editar o README.md da master
-
-```
-git checkout master
-
-echo 'blabla' >> README.md
-
-git add .
-
-git commit --amend --no-edit
-
-git push --force
-```
+Feitos na Alura
