@@ -53,6 +53,15 @@ VERSÕES:
     > - Quando a fase OnInit não é suficiente
     > - A interface OnChanges, e como interagir com SimpleChanges
 
+
+  - ### Aula 06
+
+    > - Novo componente para filtrar e paginar fotos
+    > - Uso e criação de de Pipe para filtro
+    > - Uso de property Binding
+    > - Uso de resolvers para trazer pagina com dados carregados
+    > - Evitando multiplas requisições para api usando Debounce - RxJs e Subject
+
 Parte 2
 Parte 3
 Parte 4
