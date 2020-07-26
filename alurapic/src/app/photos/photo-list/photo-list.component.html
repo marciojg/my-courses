@@ -1,1 +1,32 @@
-<ap-photos [photos]="photoList"></ap-photos>
+<div class="text-center mt-3 mb-3">
+  <form>
+      <input
+        class="rounded"
+        type="search"
+        placeholder="search..."
+        autofocus
+        (keyup)="filter = $event.target.value"
+      >
+  </form>
+</div>
+
+<!--
+keyup="filter = $event.target.value"
+
+Ã‰ a mesma coisa que:
+
+let filter
+input.addEventListener('keyup', function(event) {
+    filter = event.targer.value
+});
+-->
+
+<!--
+Como FUnciona um PIPE
+
+{{ nome | uppercase }}
+O uppercase é uma espécie de transformação pela qual nome passará,
+por meio de |, que serve de "tubo de passagem". Com esta alteração,
+após salvarmos e voltarmos ao navegador, o nome passará a ser exibido em caixa alta.
+ -->
+<ap-photos [photos]="photoList | filterByDescription: filter"></ap-photos>
