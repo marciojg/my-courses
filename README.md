@@ -46,6 +46,13 @@ VERSÕES:
     > - Como lidar com páginas 404
     > - Parametrizando rotas e como obter valores do segmento parametrizado
 
+  - ### Aula 05
+
+    > - Novo componente para listar photos
+    > - Adequação dos dados recebidos pelo componente
+    > - Quando a fase OnInit não é suficiente
+    > - A interface OnChanges, e como interagir com SimpleChanges
+
 Parte 2
 Parte 3
 Parte 4
