@@ -30,3 +30,8 @@ por meio de |, que serve de "tubo de passagem". Com esta alteração,
 após salvarmos e voltarmos ao navegador, o nome passará a ser exibido em caixa alta.
  -->
 <ap-photos [photos]="photoList | filterByDescription: filter"></ap-photos>
+
+<ap-load-button
+    (click)="load()"
+    [hasMore]="hasMore">
+</ap-load-button>
