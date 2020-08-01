@@ -62,6 +62,13 @@ VERSÕES:
     > - Uso de resolvers para trazer pagina com dados carregados
     > - Evitando multiplas requisições para api usando Debounce - RxJs e Subject
 
+  - ### Aula 07
+
+    > - Overview sobre módulos, submódulos, imports, exports, declarations
+    > - Integração com Font Awesome
+    > - Usando o novo componente de filtro com a funcionalidade de output property
+    > - Criar uma diretiva de `darken-on-hover`
+
 Parte 2
 Parte 3
 Parte 4
