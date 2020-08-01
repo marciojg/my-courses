@@ -7,7 +7,7 @@ VERSÕES:
 
 * [Angular parte 1: Fundamentos](https://cursos.alura.com.br/course/angular-fundamentos)
 
-  ## T�picos abordados por cap�tulo
+  ## Tópicos abordados por capítulo
 
     - ### Aula 01
 
