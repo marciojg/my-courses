@@ -69,7 +69,17 @@ VERSÕES:
     > - Usando o novo componente de filtro com a funcionalidade de output property
     > - Criar uma diretiva de `darken-on-hover`
 
-Parte 2
+* [Angular parte 2: Autenticação, Forms e lazy loading](https://cursos.alura.com.br/course/angular-autenticacao)
+
+  - ### Aula 01
+
+    > - Criação de um componente de login
+    > - Validação de formulário
+    > - Como componentizar mensagens de validação;
+    > - Como enviar crendenciais para a API
+    > - Como redirecionar e obter referências do template (`ViewChild`)
+    > - Descobrindo a plataforma de execução.
+
 Parte 3
 Parte 4
 
