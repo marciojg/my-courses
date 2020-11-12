@@ -75,10 +75,17 @@ VERSÕES:
 
     > - Criação de um componente de login
     > - Validação de formulário
-    > - Como componentizar mensagens de validação;
+    > - Como componentizar mensagens de validação
     > - Como enviar crendenciais para a API
     > - Como redirecionar e obter referências do template (`ViewChild`)
-    > - Descobrindo a plataforma de execução.
+    > - Descobrindo a plataforma de execução
+
+  - ### Aula 02
+
+    > - Como acessar o header de resposta
+    > - Armazenamento de token
+    > - A segurança do token
+    > - Cabeçalho da nossa aplicação
 
 Parte 3
 Parte 4
