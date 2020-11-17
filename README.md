@@ -87,6 +87,18 @@ VERSÕES:
     > - A segurança do token
     > - Cabeçalho da nossa aplicação
 
+  - ### Aula 03
+
+    > - Como separar responsabilidades
+    > - Qual o papel do BehaviorSubject
+      >> - O BehaviorSubject armazena a última emissão até que alguém apareça para consumi-la
+    > - Utilização do Async pipe
+      >> - Com o Async pipe conseguimos capturar a emissão do Observable diretamente do nosso template
+    > - A implementação do logout
+      >> - O guarda de rotas serve para darmos consistência para nossa aplicação, liberando acesso apenas para as rotas que fazem sentido para nosso usuário
+    > - A diretiva routerLink.
+      >> - Evitar recarregamento da página e perca de estado da aplicação
+
 Parte 3
 Parte 4
 
