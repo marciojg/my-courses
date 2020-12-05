@@ -99,6 +99,15 @@ VERSÕES:
     > - A diretiva routerLink.
       >> - Evitar recarregamento da página e perca de estado da aplicação
 
+  - ### Aula 04
+
+    > - Criação de um componente de registro
+    > - Validação de formulário de registro
+    > - Como criar nosso próprio validador
+    > - Validando de maneira assíncrona
+    > - Submissão de dados
+
+
 Parte 3
 Parte 4
 
