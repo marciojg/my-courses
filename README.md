@@ -107,6 +107,12 @@ VERSÕES:
     > - Validando de maneira assíncrona
     > - Submissão de dados
 
+  - ### Aula 05
+    > - Rotas filhas
+    > - Como buildar o projeto
+    > - Lazy loading e code splitting
+    > - Interceptadores e envio de token
+
 
 Parte 3
 Parte 4
