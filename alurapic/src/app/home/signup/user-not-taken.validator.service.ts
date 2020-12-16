@@ -7,7 +7,7 @@ import { SignUpService } from './signup.service';
 alguma informação. Mas uma função validadora, ou seja, um validador não aceita injeção dependência.
 Por isso nestes casos é criado um Validador/Serviço que é um serviço que tem um método que retorna uma
 função de validação*/
-@Injectable({ providedIn: 'root' })
+@Injectable()
 export class UserNotTakenValidatorService {
 
 	constructor(private signUpService: SignUpService) {}
