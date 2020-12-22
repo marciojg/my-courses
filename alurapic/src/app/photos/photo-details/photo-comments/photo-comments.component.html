@@ -14,23 +14,23 @@
   </ul>
 
   <div class="mt-4">
-    <form [formGroup]="commentForm" (submit)="save()">
-      <div class="input-group">
-        <textarea formControlName="comment"
-                  class="form-control">
-        </textarea>
-        <div class="input-group-append">
-          <button [disabled]="commentForm.invalid"
-                  class="btn btn-primary pull-left"
-          >
-            Publish
-          </button>
+      <form [formGroup]="commentForm" (submit)="save()">
+        <div class="input-group">
+          <textarea formControlName="comment"
+                    class="form-control">
+          </textarea>
+          <div class="input-group-append">
+            <button [disabled]="commentForm.invalid"
+                    class="btn btn-primary pull-left"
+            >
+              Publish
+            </button>
+          </div>
         </div>
-      </div>
-      <ap-vmessage
-        text="Maximun size allowed is 300"
-        *ngIf="commentForm.get('comment').errors?.maxlength">
-      </ap-vmessage>
-    </form>
+        <ap-vmessage
+          text="Maximun size allowed is 300"
+          *ngIf="commentForm.get('comment').errors?.maxlength">
+        </ap-vmessage>
+      </form>
   </div>
 <div>
