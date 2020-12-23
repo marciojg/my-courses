@@ -1,5 +1,7 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { of, throwError } from 'rxjs';
+import { catchError, map } from 'rxjs/operators';
 import { Photo } from './photo';
 import { PhotoComment } from './photo-comment';
 
@@ -50,5 +52,25 @@ export class PhotoService {
 
   removePhoto(photoId: number) {
     return this.http.delete(API + '/photos/' + photoId);
-}
+  }
+
+  like(photoId: number) {
+    /*
+    Sabemos que para ter acesso ao status da resposta, precisaremos passar um terceiro parâmetro:
+    observe: 'response'. Em seguida, faremos um pipe(map()), map(), por sua vez, atua como um JavaScript
+    que retorna true. Ao passarmos o mouse sobre esse elemento, veremos que ele retorna um observable do
+    tipo boolean.
+    Se acontecer um erro 304, devemos retornar um observable do tipo boolean com valor falso.
+    Então precisaremos realizar algumas alterações. Faremos um pipe() utilizando o catchError().
+    Então faremos um teste para descobrir se ele é do tipo 304, caso sim, retornaremos o observable
+    com valor false. Para tanto, importaremos um operador RxJS of().
+    */
+    return this.http.post(
+        API + '/photos/' + photoId +  '/like', {}, {observe: 'response'}
+    )
+    .pipe(map(res => true))
+    .pipe(catchError(err => {
+      return err.status == '304' ? of(false) : throwError(err);
+    }));
+  }
 }
