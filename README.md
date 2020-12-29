@@ -113,8 +113,56 @@ VERSÕES:
     > - Lazy loading e code splitting
     > - Interceptadores e envio de token
 
+* [Angular parte 3: upload, build e novos componentes](https://cursos.alura.com.br/course/angular-upload-build)
 
-Parte 3
+  - ### Aula 01
+
+    > - Criar rodapé
+    > - Criar formulário para upload de fotos com validação
+    > - Permitir upload de fotos com preview
+
+  - ### Aula 02
+
+    > - Melhoria no botão de upload
+    > - Uso de *ngIf e else
+    > - Esconder elemento no DOM
+    > - Bloquenado acesso não atententicado
+
+    - ### Aula 03
+
+    > - Uso de rotas parametrizadas
+    > - Capturando parãmetro de rotas
+
+  - ### Aula 04
+
+    > - Permitir comentário de fotos
+    > - Componetizar o formulário de comentário de fotos
+    > - Validar fomrulário de fotos e refresh automatizado da lista de comentários
+
+  - ### Aula 05
+
+    > - Limitar o comentário a somente fotos que possuem esta permissão
+    > - Permitir remoção de fotos
+    > - Revisando Pipe Async
+    > - criando nossos próprios tipos
+
+  - ### Aula 06
+
+    > - Criar componente de notificação
+    > - Uso do modificador Readlony
+    > - Revisão sobre Subject
+
+  - ### Aula 07
+
+    > - Permitir curtir fotos
+    > - Exibir botão de curtir para somente usuários logados
+    > - Criando Observables com of
+    > - Revisão sobre Rxjs
+
+    - ### Aula 08
+
+    > - Diferenciando ambientes de deploy
+
 Parte 4
 
 Feitos na Alura
