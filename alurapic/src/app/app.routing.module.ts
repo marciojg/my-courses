@@ -25,20 +25,36 @@ const routes: Routes = [
       component: PhotoListComponent,
       resolve: {
         photoList: PhotoListResolver
+      },
+      /*
+      O sistema de rotas do Angular permite que o desenvolvedor pendure informações nas
+      configurações de rota para que mais tarde sejam obtidas através dos componentes carregadas por ela.
+      */
+      data: {
+        title: 'Timeline'
       }
     },
     {
       path: 'p/add',
       component: PhotoFormComponent,
-      canActivate: [AuthGuard]
+      canActivate: [AuthGuard],
+      data: {
+        title: 'Photo upload'
+      }
     },
     {
       path: 'p/:photoId',
-      component: PhotoDetailsComponent
+      component: PhotoDetailsComponent,
+      data: {
+        title: 'Photo detail'
+      }
     },
     {
       path: 'not-found',
-      component: NotFoundComponent
+      component: NotFoundComponent,
+      data: {
+        title: 'Not found'
+      }
     },
     {
       path: '**',
