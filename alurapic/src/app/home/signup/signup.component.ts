@@ -22,7 +22,7 @@ export class SignUpComponent implements OnInit {
 		private signUpService: SignUpService,
     private router: Router,
     private platformDetectorService: PlatformDetectorService
-    ) {}
+  ) {}
 
   ngOnInit(): void {
     this.signupForm = this.formBuilder.group({
@@ -62,12 +62,14 @@ export class SignUpComponent implements OnInit {
   }
 
   signup() {
-		const newUser = this.signupForm.getRawValue() as NewUser;
-		this.signUpService
-		.signup(newUser)
-		.subscribe(
-			() => this.router.navigate(['']),
-			err => console.log(err)
-		);
+    if(this.signupForm.valid && !this.signupForm.pending) {
+      const newUser = this.signupForm.getRawValue() as NewUser;
+      this.signUpService
+      .signup(newUser)
+      .subscribe(
+        () => this.router.navigate(['']),
+        err => console.log(err)
+      );
+    }
   }
 }
