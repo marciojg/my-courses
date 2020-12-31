@@ -163,6 +163,40 @@ VERSÕES:
 
     > - Diferenciando ambientes de deploy
 
-Parte 4
+* [Angular parte 4: lapidando o projeto](https://cursos.alura.com.br/course/angular-lapidando-projeto)
+
+  - ### Aula 01
+
+    > - Criar serviço dedicado a alterar o título de cada página acessada
+
+  - ### Aula 02
+
+    > - Exibir progresso do upload para o usuário
+    > - Uso do operador `finalize`
+
+    - ### Aula 03
+
+    > - Exibir barra superior indicando carregamento de algo pelo back-end
+    > - Uso de serviço, componente e interceptor
+
+  - ### Aula 04
+
+    > - Criar menu para a aplicação
+    > - Uso do evento `keyup.space` e do provider `ngClass`
+
+  - ### Aula 05
+
+    > - Criar um Global Hander Error
+    > - Tratar e enviar errors para um serviço back-end
+
+  - ### Aula 06
+
+    > - Exibir erros de validação somente ao submeter o formulário ou tocar no field/input
+    > - Usar crossfield validation para validar se a senha é diferente do nome do usuário
+
+  - ### Aula 07
+
+    > - Remover rota da history API (histórico de navegação do navegador)
+    > - Usando queryParams para redirecionar um usuário para a págica que ele tentou acessar antes de estar logado
 
 Feitos na Alura
