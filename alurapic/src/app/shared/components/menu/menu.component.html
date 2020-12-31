@@ -1,6 +1,12 @@
 <div [ngClass]="{ 'active-menu': isShown}" >
   <div class="menu-bar">
-    <i class="fa fa-window-close" (click)="toggle()"></i>
+    <i
+      tabindex="0"
+      class="fa fa-window-close"
+      (keyup.space)="toggle()"
+      (click)="toggle()"
+    >
+    </i>
     <!--
       Usaremos <ng-content> para adicionar os itens do menu. Usaremos esse elemento,
       pois em header.component.html inseriremos os itens do menu em <ap-menu #menu>
