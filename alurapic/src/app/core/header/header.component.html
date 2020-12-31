@@ -16,9 +16,10 @@
     <ap-menu #menu>
       <!-- todos os dados adicionados dentro do ap-menu vao ser exibidos pelo componente pq ele ta usando
       a tag <ng-content> -->
-      <ul>
-        <li>Menu item 1</li>
-        <li>Menu item 2</li>
+      <ul class="list-unstyled">
+        <li>
+          <a showIfLogged [routerLink]="['p','add']"> Upload </a>
+        </li>
       </ul>
     </ap-menu>
 
