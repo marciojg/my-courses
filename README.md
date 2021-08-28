@@ -1,34 +1,15 @@
-# my-courses
-Repositório destinado a guardar os códigos fontes produzidos nos cursos que fiz. Separado por branch
+# curso API Rest com .NET Core 5: Operações essenciais com verbos HTTP
 
-# Para adicionar mais um siga esta sequencia de exemplo
 
-```
-git checkout -b nome-da-linguagem-mais-complemento
+https://cursos.alura.com.br/course/api-rest-net-core-5-operacoes-verbos-http
 
-git remote add -f alurabank ~/Desktop/projects/curso-ts/alurabank/
+## Faça esse curso de .NET API e:
 
-git merge alurabank/master --allow-unrelated-histories
-
-echo "Comentário sobre o código do curso" > README.md
-
-git add .
-
-git commit -m "Adicionado curso xxxxx"
-
-git push --set-upstream origin nome-da-linguagem-mais-complemento
-```
-
-# Sequencia para editar o README.md da master
-
-```
-git checkout master
-
-echo 'blabla' >> README.md
-
-git add .
-
-git commit --amend --no-edit
-
-git push --force
-```
+- Entenda o que é uma API
+- Aprenda a receber requisições em sua API
+- Controle as informações que o usuário pode enviar
+- Entenda os principais verbos HTTP
+- Conecte-se à uma base de dados utilizando o Entity Framework Core
+- Aprenda como retornar as informações para o usuário de maneira padronizada
+- Utilize DTOs para lidar com requisições e respostas
+- Mapeie os objetos do seu sistema de maneira automatizada com o AutoMapper
