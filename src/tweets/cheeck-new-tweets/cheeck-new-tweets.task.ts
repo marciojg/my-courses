@@ -1,5 +1,7 @@
+import { InjectQueue } from '@nestjs/bull';
 import { CACHE_MANAGER, Inject, Injectable } from '@nestjs/common';
 import { Interval } from '@nestjs/schedule';
+import { Queue } from 'bull';
 import { Cache } from 'cache-manager';
 import { TweetsService } from '../tweets.service';
 
@@ -11,6 +13,8 @@ export class CheeckNewTweetsTask {
     private tweetsService: TweetsService,
     @Inject(CACHE_MANAGER)
     private cache: Cache,
+    @InjectQueue('emails')
+    private emailsQueue: Queue,
   ) {}
 
   @Interval(5000)
@@ -35,7 +39,8 @@ export class CheeckNewTweetsTask {
         ttl: 1 * 60 * 10,
       });
 
-      console.log('enviar-email');
+      console.log('Add na fila de mail');
+      this.emailsQueue.add({}); //kafka
     }
   }
 }

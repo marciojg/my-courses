@@ -1,3 +1,4 @@
+import { BullModule } from '@nestjs/bull';
 import { CacheModule, Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import * as redisStore from 'cache-manager-redis-store';
@@ -14,6 +15,9 @@ import { TweetsService } from './tweets.service';
       port: '6379',
     }),
     MongooseModule.forFeature([{ name: Tweet.name, schema: TweetSchema }]),
+    BullModule.registerQueue({
+      name: 'emails',
+    }),
   ],
   controllers: [TweetsController],
   providers: [TweetsService, CheeckNewTweetsTask],
