@@ -45,6 +45,20 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
+## Running the app with docker
+
+```bash
+docker build . -t desafio1-nestjs
+```
+
+```bash
+docker run -u $(id -u) --rm -v "$PWD":/home/node/app -p 3000:3000 desafio1-nestjs
+```
+
+```bash
+docker run -it -u $(id -u) --rm -v "$PWD":/home/node/app desafio1-nestjs sh
+```
+
 ## Test
 
 ```bash
@@ -71,9 +85,3 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
-
-
-docker build . -t desafio1-nestjs
-
-docker run -u $(id -u) --rm -v "$PWD":/home/node/app -p 3000:3000 desafio1-nestjs
-docker run -it -u $(id -u) --rm -v "$PWD":/home/node/app desafio1-nestjs sh
