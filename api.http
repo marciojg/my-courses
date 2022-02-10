@@ -1,2 +1,11 @@
 ###
-http://localhost:3000
+GET http://localhost:3000/transactions
+
+###
+POST http://localhost:3000/transactions
+Content-Type: application/json
+
+{
+  "account_id": 22,
+  "amount": 1211
+}
