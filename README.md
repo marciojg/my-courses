@@ -1,34 +1,16 @@
-# my-courses
-Repositório destinado a guardar os códigos fontes produzidos nos cursos que fiz. Separado por branch
+# Imersão Fullcycle 6 - Monitoramento de tweets
+![Imersão Full Stack && Full Cycle](https://events-fullcycle.s3.amazonaws.com/events-fullcycle/static/site/img/grupo_4417.png)
 
-# Para adicionar mais um siga esta sequencia de exemplo
+## Ordem recomendada de execução
 
-```
-git checkout -b nome-da-linguagem-mais-complemento
+* Kafka
+  * Configurar conexão com twitter
+  * Configurar conexão com o mongo db
+* Nest.js
+* Next.js
 
-git remote add -f alurabank ~/Desktop/projects/curso-ts/alurabank/
-
-git merge alurabank/master --allow-unrelated-histories
-
-echo "Comentário sobre o código do curso" > README.md
-
-git add .
-
-git commit -m "Adicionado curso xxxxx"
-
-git push --set-upstream origin nome-da-linguagem-mais-complemento
-```
-
-# Sequencia para editar o README.md da master
+Execute o comando:
 
 ```
-git checkout master
-
-echo 'blabla' >> README.md
-
-git add .
-
-git commit --amend --no-edit
-
-git push --force
+docker-compose up
 ```
