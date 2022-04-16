@@ -1,34 +1,16 @@
-# my-courses
-Repositório destinado a guardar os códigos fontes produzidos nos cursos que fiz. Separado por branch
+# bytebank
 
-# Para adicionar mais um siga esta sequencia de exemplo
+A new Bytebank project.
 
-```
-git checkout -b nome-da-linguagem-mais-complemento
+## Getting Started
 
-git remote add -f alurabank ~/Desktop/projects/curso-ts/alurabank/
+This project is a starting point for a Flutter application.
 
-git merge alurabank/master --allow-unrelated-histories
+A few resources to get you started if this is your first Flutter project:
 
-echo "Comentário sobre o código do curso" > README.md
+- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-git add .
-
-git commit -m "Adicionado curso xxxxx"
-
-git push --set-upstream origin nome-da-linguagem-mais-complemento
-```
-
-# Sequencia para editar o README.md da master
-
-```
-git checkout master
-
-echo 'blabla' >> README.md
-
-git add .
-
-git commit --amend --no-edit
-
-git push --force
-```
+For help getting started with Flutter, view our
+[online documentation](https://flutter.dev/docs), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
